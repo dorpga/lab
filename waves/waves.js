@@ -86,16 +86,6 @@ draw.t = 0;
  * Function to draw axes
  */
 function drawAxes() {
-    
-    // Draw X and Y axes
-    context.moveTo(0, xAxis);
-    context.lineTo(width, xAxis);
-    context.moveTo(yAxis, 0);
-    context.lineTo(yAxis, height);
-    
-    // Draw X axis tick at PI
-    context.moveTo(yAxis+Math.PI*unit, xAxis+5);
-    context.lineTo(yAxis+Math.PI*unit, xAxis-5);
 }
 
 /**
@@ -143,8 +133,6 @@ function drawSine(t) {
  * Function to draw circle
  */
 function drawCircle() {
-    context.moveTo(yAxis+unit, xAxis);
-    context.arc(yAxis, xAxis, unit, 0, 2*Math.PI, false);
 }
 
 /**
