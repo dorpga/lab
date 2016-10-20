@@ -61,22 +61,10 @@ draw = function () {
     // Draw the sine curve at time draw.t, as well as the circle.
     context.beginPath();
     drawSine(draw.t);
-    drawCircle();
     context.stroke();
-    
-    // Draw the arrow at time t in its own path.
-    drawArrow(draw.t);
     
     // Restore original styles
     context.restore();
-    
-    // Draw the xAxis PI tick and the time
-    context.fillText("Ï�", xAxis + 59+3*unit, 18+xAxis);
-    context.fillText("t = "+Math.floor(Math.abs(draw.seconds)), 10, 20);
-    
-    // Update the time and draw again
-    draw.seconds = draw.seconds - .007;
-    draw.t = draw.seconds*Math.PI;
     setTimeout(draw, 35);
 };
 draw.seconds = 0;
