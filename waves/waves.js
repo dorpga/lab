@@ -151,38 +151,6 @@ function drawCircle() {
  * Function to draw arrow
  */
 function drawArrow(t) {
-    
-    // Cache position of arrow on the circle
-    var x = yAxis+unit*Math.cos(t);
-    var y = xAxis+unit*Math.sin(t);
-    
-    // Draw the arrow line
-    context.beginPath();
-    context.moveTo(yAxis, xAxis);
-    context.lineTo(x, y);
-    context.stroke();
-    
-    // Draw the arrow bead
-    context.beginPath();
-    context.arc(x, y, 5, 0, 2*Math.PI, false);
-    context.fill();
-    context.stroke();
-    
-    // Draw dashed line to yAxis
-    context.beginPath();
-    var direction = (Math.cos(t) < 0) ? 1 : -1;
-    var start = (direction==-1) ? -5 : 0;
-    for (var i = x;  direction*i < direction*yAxis-5; i = i+direction*10) {
-        context.moveTo(i+direction*5, y);
-        context.lineTo(i+direction*10, y);
-    }
-    context.stroke();
-    
-    // Draw yAxis bead
-    context.beginPath();
-    context.arc(yAxis, y, 5, 0, 2*Math.PI, false);
-    context.fill();
-    context.stroke();
 }
 
     Humble.Trig.init()
