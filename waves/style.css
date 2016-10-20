@@ -1,6 +1,6 @@
 #wave-container {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 25%;
+  left: 25%;
   border: 10px solid black;
 }
