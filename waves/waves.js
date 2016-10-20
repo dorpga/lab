@@ -16,7 +16,7 @@ var unit = 100,
  */
 function init() {
     
-    canvas = document.getElementById("waves");
+    canvas = document.getElementById("wave");
     
     canvas.width = 800;
     canvas.height = 300;
