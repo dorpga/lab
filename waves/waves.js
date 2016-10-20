@@ -1,5 +1,6 @@
 (function () {
-
+var m = 0;
+    
 if (typeof(Humble) == 'undefined') window.Humble = {};
 Humble.Trig = {};
 Humble.Trig.init = init;
@@ -108,7 +109,17 @@ function drawSine(t) {
     // Set the initial x and y, starting at 0,0 and translating to the origin on
     // the canvas.
     var x = t;
-    var y = Math.sin(x);
+    switch (m) {
+        case 0:
+              var y = Math.sin(x);
+              break;
+        case 1:
+               var y = Math.cos(x);
+               break;
+        case 2:
+               var y = Math.tan(x);
+               break;
+    }
     context.moveTo(yAxis, unit*y+xAxis);
     
     // Loop to draw segments
