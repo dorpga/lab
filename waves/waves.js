@@ -125,7 +125,17 @@ function drawSine(t) {
     // Loop to draw segments
     for (i = yAxis; i <= width; i += 10) {
         x = t+(-yAxis+i)/unit;
-        y = Math.sin(x);
+       switch (m) {
+        case 0:
+              var y = Math.sin(x);
+              break;
+        case 1:
+               var y = Math.cos(x);
+               break;
+        case 2:
+               var y = Math.tan(x);
+               break;
+    }
         context.lineTo(i, unit*y+xAxis);
     }
 }
