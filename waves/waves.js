@@ -1,4 +1,3 @@
-(function () {
 var m = 0;
     
 if (typeof(Humble) == 'undefined') window.Humble = {};
@@ -187,5 +186,3 @@ function drawArrow(t) {
 }
 
     Humble.Trig.init()
-    
-})();
